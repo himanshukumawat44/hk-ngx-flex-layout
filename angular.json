@@ -96,6 +96,39 @@
           }
         }
       }
+    },
+    "hk-ngx-flex-layout": {
+      "projectType": "library",
+      "root": "projects/hk-ngx-flex-layout",
+      "sourceRoot": "projects/hk-ngx-flex-layout/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/hk-ngx-flex-layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hk-ngx-flex-layout/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/hk-ngx-flex-layout/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/hk-ngx-flex-layout/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

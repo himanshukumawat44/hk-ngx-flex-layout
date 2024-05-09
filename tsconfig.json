@@ -5,6 +5,11 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
+    "paths": {
+      "hk-ngx-flex-layout": [
+        "./dist/hk-ngx-flex-layout"
+      ]
+    },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
